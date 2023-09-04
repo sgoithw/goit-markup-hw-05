@@ -404,7 +404,9 @@
           </p>
         </div>
         <div class="footer-socials">
-          <p class="footer-socials-title title">Social media</p>
+          <p class="footer-socials-title footer-section-title title">
+            Social media
+          </p>
           <ul class="footer-list-social list">
             <li class="footer-list-social-item item">
               <a href="" class="footer-list-social-link link">
@@ -436,6 +438,28 @@
             </li>
           </ul>
         </div>
+        <div class="footer-subscribe">
+          <p class="footer-subscribe-title footer-section-title title">
+            Subscribe
+          </p>
+          <form class="footer-subscribe-form form">
+            <input
+              type="email"
+              name="email"
+              placeholder="E-mail"
+              class="footer-subscribe-form-input form-input"
+            />
+            <button
+              type="submit"
+              class="footer-subscribe-form-button form-button btn btn-accent"
+            >
+              Subscribe
+              <svg class="footer-subscribe-button-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-send"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </div>
     </footer>
 
@@ -447,6 +471,38 @@
             <use href="./images/icons.svg#icon-close"></use>
           </svg>
         </button>
+        <form class="order-form form">
+          <label>
+            Name
+            <svg class="order-form-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-body"></use>
+            </svg>
+            <input type="text" name="name" />
+          </label>
+          <label>
+            Phone
+            <svg class="order-form-icon" width="12" height="12">
+              <use href="./images/icons.svg#icon-phone"></use>
+            </svg>
+            <input type="phone" name="phone" />
+          </label>
+          <label>
+            Email
+            <svg class="order-form-email" width="12" height="12">
+              <use href="./images/icons.svg#icon-email"></use>
+            </svg>
+            <input type="email" name="email" />
+          </label>
+          <label>
+            Comment
+            <textarea name="comment" rows="7"></textarea>
+          </label>
+          <label>
+            <input type="checkbox" name="terms" />
+            I accept the terms and conditions of the
+            <a href="">Privacy Policy</a>
+          </label>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
