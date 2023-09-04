@@ -18,6 +18,7 @@
   --logo-accent-color: #4d5ae5;
   --title-dark-color: #2e2f42;
   --text-dark-color: #434455;
+  --text-secondary-dark-color: #8e8f99;
   --text-light-color: #fff;
   --text-light-accent-color: #4d5ae5;
   --text-active-color: #404bbf;
@@ -160,6 +161,10 @@ img {
   overflow: hidden;
 }
 
+.form {
+}
+.form-label {
+}
 .form-input {
 }
 .form-button {
@@ -414,6 +419,7 @@ img {
   top: 50%;
   transform: translateX(-50%) translateY(-50%) rotate(0) scale(1);
   transition: transform var(--default-transition);
+  padding: 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.01);
@@ -450,6 +456,38 @@ img {
   transition: fill var(--default-transition);
 }
 
+.order-form-title {
+  padding-top: 48px;
+  color: var(--title-dark-color);
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 16px;
+}
+.order-form {
+}
+.order-label {
+  width: 100%;
+  display: block;
+  color: var(--text-secondary-dark-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+}
+.order-form-icon {
+}
+.order-form-input {
+  width: 100%;
+}
+.order-form-email {
+}
+.order-form-button {
+  display: block;
+  margin: 0 auto;
+  padding: 16px 32px;
+  width: 169px;
+}
 /** Main page **/
 
 .main-page {
