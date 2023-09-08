@@ -500,7 +500,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   stroke: #404040;
-  transition: stroke var(--default-transition), fill var(--default-transition);
+  transition: fill var(--default-transition);
   pointer-events: none;
   fill: var(--title-dark-color);
 }
@@ -551,7 +551,7 @@ img {
   cursor: pointer;
   fill: transparent;
   transition: background-color var(--default-transition),
-    border var(--default-transition);
+    border var(--default-transition), fill var(--default-transition);
 }
 input[type="checkbox"]:checked + label > .order-form-checkbox {
   background-color: var(--active-color);
@@ -569,16 +569,13 @@ input[type="checkbox"]:focus-visible + .order-form-checkbox {
 .order-form-checkbox-icon {
   fill: inherit;
 }
-.order-form-agreement {
-}
-.order-form-agreement > a {
+
+.order-form-agreement-link {
   color: var(--text-light-accent-color);
   text-decoration-line: underline;
 }
 .order-form-agreement-label {
-  display: flex;
-  gap: 8px;
-  align-items: center;
+  display: block;
 }
 .order-form-last-row {
   margin-bottom: 24px;
