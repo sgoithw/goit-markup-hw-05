@@ -31,6 +31,7 @@
   --button-secondary-active-bg-color: #404bbf;
 
   --border-light-color: #e7e9fc;
+  --border-second-light-color: #fff;
   --border-dark-color: #8e8f99;
 
   --dark-border-color: rgba(46, 47, 66, 0.4);
@@ -361,19 +362,21 @@ img {
 }
 .footer-subscribe-form {
   display: flex;
+  gap: 24px;
 }
 .footer-subscribe-form-input {
   font-size: 12px;
   font-weight: 400;
-  line-height: 2;
+  line-height: 1.5;
   letter-spacing: 0.04em;
-  background: transparent;
+  background-color: transparent;
   color: var(--text-light-color);
   padding: 8px 16px;
   width: 264px;
-  margin-right: 24px;
+  height: 40px;
   border-radius: 4px;
-  border: 1px solid var(--WHITE, #fff);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  border: 1px solid var(--border-second-light-color);
 }
 .footer-subscribe-form-input::placeholder {
   color: var(--text-light-color);
@@ -383,8 +386,12 @@ img {
   letter-spacing: 0.04em;
 }
 .footer-subscribe-form-button {
-  padding: 8px 24px;
   display: flex;
+  border: none;
+  min-width: 165px;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
 }
 .footer-subscribe-button-icon {
   fill: currentColor;
@@ -422,7 +429,7 @@ img {
   top: 50%;
   transform: translateX(-50%) translateY(-50%) rotate(0) scale(1);
   transition: transform var(--default-transition);
-  padding: 24px;
+  padding: 72px 24px 24px 24px;
 }
 .backdrop.is-hidden .modal {
   transform: translateX(-50%) translateY(-50%) scale(0.01);
@@ -460,7 +467,6 @@ img {
 }
 
 .order-form-title {
-  padding-top: 48px;
   color: var(--title-dark-color);
   text-align: center;
   font-weight: 500;
@@ -473,11 +479,14 @@ img {
 .order-form-row {
   width: 100%;
   display: block;
+  margin-bottom: 8px;
 }
 .order-form-field {
   position: relative;
 }
 .order-label {
+  display: block;
+  margin-bottom: 4px;
   color: var(--text-secondary-dark-color);
   font-size: 12px;
   font-style: normal;
@@ -491,7 +500,7 @@ img {
   top: 50%;
   transform: translateY(-50%);
   stroke: #404040;
-  transition: stroke var(--trns-fast), fill var(--trns-fast);
+  transition: stroke var(--default-transition), fill var(--default-transition);
   pointer-events: none;
   fill: var(--title-dark-color);
 }
@@ -500,9 +509,11 @@ img {
   height: 40px;
   padding: 0 38px;
   border-radius: 4px;
+  background-color: transparent;
+  outline: transparent;
   border: 1px solid var(--dark-border-color);
   border-color: var(--dark-border-color);
-  transition: border-color var(--trns-fast);
+  transition: border-color var(--default-transition);
 }
 .order-form-input:focus {
   outline: none;
@@ -514,14 +525,23 @@ img {
 .order-form-comment {
   display: block;
   height: 120px;
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.04em;
+  color: rgba(46, 47, 66, 0.4);
+  outline: transparent;
   resize: none;
   padding: 8px 16px;
   margin-bottom: 13px;
+  width: 100%;
+}
+.order-form-comment-row {
+  margin-bottom: 16px;
 }
 .order-form-email {
 }
 .order-form-checkbox {
-  display: flex;
+  display: inline-flex;
   width: 16px;
   height: 16px;
   border: 1px solid var(--dark-border-color);
@@ -529,17 +549,13 @@ img {
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  fill: transparent;
   transition: background-color var(--default-transition),
-    border-color var(--default-transition);
+    border var(--default-transition);
 }
-input[type="checkbox"]:checked + .order-form-checkbox {
+input[type="checkbox"]:checked + label > .order-form-checkbox {
   background-color: var(--active-color);
-  border-color: var(--active-color);
-}
-
-input[type="checkbox"]:checked
-  + .order-form-checkbox
-  > .order-form-checkbox-icon {
+  border: none;
   fill: var(--main-light-color);
 }
 
@@ -551,7 +567,7 @@ input[type="checkbox"]:focus-visible + .order-form-checkbox {
 .form-checkbox {
 }
 .order-form-checkbox-icon {
-  fill: transparent;
+  fill: inherit;
 }
 .order-form-agreement {
 }
@@ -563,13 +579,17 @@ input[type="checkbox"]:focus-visible + .order-form-checkbox {
   display: flex;
   gap: 8px;
   align-items: center;
+}
+.order-form-last-row {
   margin-bottom: 24px;
 }
 .order-form-button {
   display: block;
   margin: 0 auto;
   padding: 16px 32px;
-  width: 169px;
+  min-width: 169px;
+  height: 56px;
+  border: none;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 }
 /** Main page **/
